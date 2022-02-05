@@ -1,0 +1,32 @@
+{
+    "$id": "http://cloud.todoninja.de/schemas/task.json",
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "description": "The task schema as it is used in the todoninja universe.",
+    "properties": {
+        "id": {
+            "description": "A UUID in Version 4 for identification.",
+            "type": "string",
+            "format": "uuid"
+        },
+        "name": {
+            "description": "The name of the list, usually just one word.",
+            "type": "string"
+        },
+        "createdAt": {
+            "description": "The date and time the list was created.",
+            "type": "string",
+            "format": "date-time"
+        },
+        "updatedAt": {
+            "description": "The date and time the list was last updated at.",
+            "type": "string",
+            "format": "date-time"
+        }
+    },
+    "required": [
+        "id",
+        "name",
+        "createdAt",
+        "updatedAt"
+    ]
+}

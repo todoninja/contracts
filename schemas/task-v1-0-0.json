@@ -1,0 +1,67 @@
+{
+    "$id": "http://cloud.todoninja.de/schemas/task.v1.0.0.json",
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "description": "The task schema as it is used in the todoninja universe.",
+    "properties": {
+        "id": {
+            "description": "A UUID in Version 4 for identification.",
+            "type": "string",
+            "format": "uuid"
+        },
+        "listId": {
+            "description": "The id of the list the task belongs to. If null is given, the task is not assigned to any list.",
+            "type": [
+                "string",
+                "null"
+            ],
+            "format": "uuid"
+        },
+        "title": {
+            "description": "The title of the task, typically a one-line summary.",
+            "type": "string"
+        },
+        "doneAt": {
+            "description": "The date and time the task was completed.",
+            "type": [
+                "string",
+                "null"
+            ],
+            "format": "date-time"
+        },
+        "postponedUntil": {
+            "description": "The date from which the task can be completed.",
+            "type": [
+                "string",
+                "null"
+            ],
+            "format": "date"
+        },
+        "deadlineAt": {
+            "description": "The date until the task has to be done.",
+            "type": [
+                "string",
+                "null"
+            ],
+            "format": "date"
+        },
+        "createdAt": {
+            "description": "The date and time the task was created.",
+            "type": "string",
+            "format": "date-time"
+        },
+        "updatedAt": {
+            "description": "The date and time the task was last updated at.",
+            "type": "string",
+            "format": "date-time"
+        }
+    },
+    "required": [
+        "id",
+        "title",
+        "doneAt",
+        "postponedUntil",
+        "deadlineAt",
+        "createdAt",
+        "updatedAt"
+    ]
+}
