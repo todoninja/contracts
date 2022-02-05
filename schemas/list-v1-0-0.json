@@ -1,5 +1,5 @@
 {
-    "$id": "http://cloud.todoninja.de/schemas/task.json",
+    "$id": "https://raw.githubusercontent.com/todoninja/todoninja-contracts/main/schemas/list-v1-0-0.json",
     "$schema": "http://json-schema.org/draft-04/schema#",
     "description": "The task schema as it is used in the todoninja universe.",
     "properties": {
